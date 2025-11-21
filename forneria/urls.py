@@ -15,6 +15,7 @@ urlpatterns = [
     path('', include('shop.urls')),
 ]
 
+handler404 = 'shop.views.custom_404'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

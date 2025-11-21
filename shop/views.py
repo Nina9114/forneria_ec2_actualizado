@@ -834,3 +834,7 @@ def _export_ventas_excel(queryset):
     response['Content-Disposition'] = f'attachment; filename="{filename}.xlsx"'
     workbook.save(response)
     return response
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)

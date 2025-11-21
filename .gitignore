@@ -1,26 +1,29 @@
 # Python
-*.py[cod]
 __pycache__/
+*.py[cod]
+*$py.class
 *.so
-*.egg
-*.egg-info/
-dist/
-build/
+.Python
 venv/
 env/
 ENV/
+*.egg-info/
+dist/
+build/
 
 # Django
 *.log
+*.pot
+*.pyc
 db.sqlite3
 db.sqlite3-journal
-media/
-staticfiles/
-*.pot
+/media
+/staticfiles
+!staticfiles/.gitkeep
 
-# Environment variables - NO SUBIR CONTRASEÑAS
+# Environment variables
 .env
-.env.local
+.venv
 
 # IDE
 .vscode/
@@ -28,22 +31,15 @@ staticfiles/
 *.swp
 *.swo
 *~
+
+# OS
 .DS_Store
+Thumbs.db
 
-# Database
-*.sql
-*.sqlite
+# AWS
+*.pem
+*.key
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-
-
-
-
-
-
-
-
+# Archivos de configuración sensibles
+config.json
+secrets.json
